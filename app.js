@@ -34,8 +34,6 @@ document.getElementById('case-minus').addEventListener('click', function(){
 
 
 
-
-
 // This code for increase phone value
 document.getElementById('phone-plus').addEventListener('click', function(){
     const phoneNumber = document.getElementById('phone-number');
@@ -54,12 +52,21 @@ document.getElementById('phone-plus').addEventListener('click', function(){
 document.getElementById('phone-minus').addEventListener('click', function(){
     const phoneNumber = document.getElementById('phone-number');
     const phoneValue = phoneNumber.value;
-    phoneNumber.value = parseInt(phoneValue) - 1;
+    if(phoneValue > 0){
+        phoneNumber.value = parseInt(phoneValue) - 1;
+    }
+
 
     // decrease total price
     const phoneTotal = document.getElementById('phone-total');
     let phoneTotalValue = phoneTotal.innerText;
-    phoneTotal.innerText = parseInt(phoneTotalValue) - 1259;
-
-
+    if(phoneTotalValue > 0){
+        phoneTotal.innerText = parseInt(phoneTotalValue) - 1259;
+    }
 });
+
+
+
+// Total price update
+
+
