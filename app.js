@@ -33,7 +33,6 @@ document.getElementById('case-minus').addEventListener('click', function(){
 
 
 
-
 // This code for increase phone value
 document.getElementById('phone-plus').addEventListener('click', function(){
     const phoneNumber = document.getElementById('phone-number');
